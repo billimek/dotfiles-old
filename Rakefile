@@ -10,11 +10,13 @@ task :install => [:submodule_init, :submodules] do
   puts "======================================================"
   puts
 
+  install_files(Dir.glob('homebrew/*')) if want_to_install?('extra homebrew stuff')
+
   install_homebrew if RUBY_PLATFORM.downcase.include?("darwin")
   install_rvm_binstubs
 
   # this has all the runcoms from this directory.
-  install_files(Dir.glob('homebrew/*')) if want_to_install?('extra homebrew stuff')
+  install_files(Dir.glob('atom/*')) if want_to_install?('atom stuff')
   install_files(Dir.glob('git/*')) if want_to_install?('git configs (color, aliases)')
   install_files(Dir.glob('irb/*')) if want_to_install?('irb/pry configs (more colorful)')
   install_files(Dir.glob('ruby/*')) if want_to_install?('rubygems config (faster/no docs)')
