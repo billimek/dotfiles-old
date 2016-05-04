@@ -125,6 +125,9 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
+# Always open everything in Finder's list view. This is important.
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
 # Show the ~/Library folder
 chflags nohidden ~/Library
 
@@ -135,9 +138,9 @@ chflags nohidden ~/Library
 # # Top right screen corner → Desktop
 # defaults write com.apple.dock wvous-tr-corner -int 4
 # defaults write com.apple.dock wvous-tr-modifier -int 0
-# # Bottom left screen corner → Start screen saver
-# defaults write com.apple.dock wvous-bl-corner -int 5
-# defaults write com.apple.dock wvous-bl-modifier -int 0
+# # Bottom left screen corner → Sleep Display
+defaults write com.apple.dock wvous-bl-corner -int 10
+defaults write com.apple.dock wvous-bl-modifier -int 0
 
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilte-stack -bool true
@@ -174,6 +177,12 @@ defaults write com.apple.dock itunes-notifications -bool true
 # Add a spacer to the right side of the Dock (where the Trash is)
 #defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
+# Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+
+# Automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 
@@ -205,6 +214,16 @@ defaults write com.apple.terminal StringEncodings -array 4
 # This means you can hover over a window and start typing in it without clicking first
 #defaults write com.apple.terminal FocusFollowsMouse -bool true
 #defaults write org.x.X11 wm_ffm -bool true
+
+# Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+# Turn on date & seconds for menubar clock
+defaults write com.apple.menuextra.clock DateFormat -string clock_format
+
+# Set the Finder prefs for showing a few different volumes on the Desktop.
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Disable the Ping sidebar in iTunes
 defaults write com.apple.iTunes disablePingSidebar -bool true
