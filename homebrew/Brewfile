@@ -2,7 +2,7 @@ cask_args appdir: '/Applications'
 
 tap 'caskroom/cask'
 tap 'caskroom/versions'
-tap 'homebrew/brewdler'
+tap 'homebrew/bundle'
 tap 'pivotal/tap'
 tap 'universal-ctags/universal-ctags'
 tap 'cloudfoundry/tap'
