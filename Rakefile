@@ -128,9 +128,9 @@ end
 
 def number_of_cores
   if RUBY_PLATFORM.downcase.include?("darwin")
-    cores = run %{ sysctl -n hw.ncpu }
+    cores = `sysctl -n hw.ncpu`
   else
-    cores = run %{ nproc }
+    cores = `nproc`
   end
   puts
   cores.to_i
