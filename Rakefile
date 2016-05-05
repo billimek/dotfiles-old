@@ -32,6 +32,8 @@ task :install => [:submodule_init, :submodules] do
 
   install_fonts
 
+  install_atom_packages
+
   install_term_theme if RUBY_PLATFORM.downcase.include?("darwin")
 
   run_bundle_config
@@ -193,6 +195,14 @@ def install_fonts
   puts "======================================================"
   run %{ cp -f $HOME/.yadr/fonts/* $HOME/Library/Fonts } if RUBY_PLATFORM.downcase.include?("darwin")
   run %{ mkdir -p ~/.fonts && cp ~/.yadr/fonts/* ~/.fonts && fc-cache -vf ~/.fonts } if RUBY_PLATFORM.downcase.include?("linux")
+  puts
+end
+
+def install_atom_packages
+  puts "======================================================"
+  puts "Installing packages for atom."
+  puts "======================================================"
+  run %{ apm install --packages-file $HOME/.atom/packages.list }
   puts
 end
 
