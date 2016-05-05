@@ -122,7 +122,8 @@ task :default => 'install'
 private
 def run(cmd)
   puts "[Running] #{cmd}"
-  `#{cmd}` unless ENV['DEBUG']
+  #{}`#{cmd}` unless ENV['DEBUG']
+  system("#{cmd}")
 end
 
 def number_of_cores
