@@ -180,7 +180,7 @@ def install_homebrew
   puts "Installing Homebrew packages...There may be some warnings."
   puts "======================================================"
   run %{brew tap Homebrew/bundle}
-  run %{brew bundle -v --global}
+  run %{brew bundle --verbose --global}
   run %{brew cleanup}
   run %{brew cask cleanup}
   run %{brew prune}
