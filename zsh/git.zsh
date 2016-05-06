@@ -3,7 +3,7 @@ __git_files () {
     _wanted files expl 'local files' _files
 }
 
-gf() {
+gfork() {
   local branch=$1
   git checkout -b $branch origin/$branch
 }
