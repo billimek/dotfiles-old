@@ -10,6 +10,10 @@ task :install => [:submodule_init, :submodules] do
   puts "======================================================"
   puts
 
+  if $update
+    puts "doing update"
+  end
+
   if RUBY_PLATFORM.downcase.include?("darwin")
     install_files(Dir.glob('homebrew/*')) if want_to_install?('extra homebrew stuff')
     install_homebrew
@@ -51,6 +55,7 @@ end
 
 desc 'Updates the installation'
 task :update do
+  $update = true
   Rake::Task["vundle_migration"].execute if needs_migration_to_vundle?
   Rake::Task["install"].execute
   #TODO: for now, we do the same as install. But it would be nice
@@ -205,7 +210,11 @@ def install_atom_packages
   puts "======================================================"
   puts "Installing packages for atom."
   puts "======================================================"
-  run %{ apm install --packages-file $HOME/.atom/packages.list }
+  if $update
+    run %{ apm update }
+  else
+    run %{ apm install --packages-file $HOME/.atom/packages.list }
+  end
   puts
 end
 
