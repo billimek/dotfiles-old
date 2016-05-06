@@ -10,9 +10,11 @@ task :install => [:submodule_init, :submodules] do
   puts "======================================================"
   puts
 
-  install_files(Dir.glob('homebrew/*')) if want_to_install?('extra homebrew stuff')
+  if RUBY_PLATFORM.downcase.include?("darwin")
+    install_files(Dir.glob('homebrew/*')) if want_to_install?('extra homebrew stuff')
+    install_homebrew
+  end
 
-  install_homebrew if RUBY_PLATFORM.downcase.include?("darwin")
   install_rvm_binstubs
 
   # this has all the runcoms from this directory.
@@ -30,11 +32,11 @@ task :install => [:submodule_init, :submodules] do
 
   Rake::Task["install_prezto"].execute
 
-  install_fonts
-
-  install_atom_packages
-
-  install_term_theme if RUBY_PLATFORM.downcase.include?("darwin")
+  if RUBY_PLATFORM.downcase.include?("darwin")
+    install_fonts
+    install_atom_packages
+    install_term_theme
+  end
 
   run_bundle_config
 

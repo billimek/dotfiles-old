@@ -27,5 +27,5 @@ else
   end
 endif
 
-colorscheme solarized
+colorscheme base16-solarized
 set background=dark
