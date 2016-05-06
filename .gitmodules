@@ -11,3 +11,6 @@
 [submodule "fonts/fonts"]
 	path = fonts/fonts
 	url = https://github.com/powerline/fonts.git
+[submodule "zsh/cf-zsh-autocomplete-plugin"]
+	path = zsh/cf-zsh-autocomplete-plugin
+	url = https://github.com/Dannyzen/cf-zsh-autocomplete-plugin.git
