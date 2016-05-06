@@ -17,7 +17,7 @@ brew 'coreutils'
 brew 'ctags'
 #brew 'docker-machine'
 brew 'git'
-brew 'go', args: ['--cross-compile-common']
+brew 'go', args: ['cross-compile-common']
 #brew 'ghi'
 brew 'gnupg'
 brew 'gradle'
@@ -44,7 +44,7 @@ brew 'spark'
 brew 'the_silver_searcher'
 brew 'tmux'
 #brew 'universal-ctags', args: ['--HEAD']
-brew 'vim', args:['--with-lua']
+brew 'vim', args:['with-lua']
 brew 'wget'
 brew 'zsh'
 #cask '1password'
