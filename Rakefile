@@ -201,8 +201,9 @@ def install_fonts
   puts "======================================================"
   puts "Installing patched fonts for Powerline/Lightline."
   puts "======================================================"
-  run %{ cp -f $HOME/.yadr/fonts/* $HOME/Library/Fonts } if RUBY_PLATFORM.downcase.include?("darwin")
-  run %{ mkdir -p ~/.fonts && cp ~/.yadr/fonts/* ~/.fonts && fc-cache -vf ~/.fonts } if RUBY_PLATFORM.downcase.include?("linux")
+  run %{ cp -f $HOME/.yadr/fonts/*.otf $HOME/Library/Fonts } if RUBY_PLATFORM.downcase.include?("darwin")
+  run %{ mkdir -p ~/.fonts && cp ~/.yadr/fonts/*.otf ~/.fonts && fc-cache -vf ~/.fonts } if RUBY_PLATFORM.downcase.include?("linux")
+  run %{ $HOME/.yadr/fonts/fonts/install.sh }
   puts
 end
 
@@ -211,7 +212,7 @@ def install_atom_packages
   puts "Installing packages for atom."
   puts "======================================================"
   if $update
-    run %{ apm update }
+    run %{ apm update --no-confirm }
   else
     run %{ apm install --packages-file $HOME/.atom/packages.list }
   end
