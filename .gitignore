@@ -14,7 +14,13 @@ vim/sessions
 .netrwhist
 bin/subl
 tags
+atom/atom/config.cson
 atom/atom/.apm
 atom/atom/.node-gyp
-atom/atom/compile-cache
-atom/atom/packages
+atom/atom/.storage
+atom/atom/blob-store
+atom/atom/compile-cache/
+atom/atom/packages/
+atom/atom/storage/
+atom/atom/themes/
+atom/atom/.apm/.apmrc
