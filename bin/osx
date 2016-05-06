@@ -158,7 +158,7 @@ defaults write com.apple.dock show-process-indicators -bool true
 defaults write com.apple.Dock autohide-delay -float 0
 
 # Remove the animation when hiding/showing the Dock (actually, make it fast. If you want to remove, use 0)
-defaults write com.apple.dock autohide-time-modifier -float 0.25
+#defaults write com.apple.dock autohide-time-modifier -float 0.25
 
 # Enable the 2D Dock
 #defaults write com.apple.dock no-glass -bool true
