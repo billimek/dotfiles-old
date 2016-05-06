@@ -14,7 +14,6 @@ vim/sessions
 .netrwhist
 bin/subl
 tags
-atom/atom/config.cson
 atom/atom/.apm
 atom/atom/.node-gyp
 atom/atom/.storage

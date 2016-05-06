@@ -1,0 +1,28 @@
+"*":
+  core:
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "*.class"
+      "*.asc"
+    ]
+    themes: [
+      "one-dark-ui"
+      "solarized-dark-syntax"
+    ]
+  editor:
+    fontFamily: "Source Code Pro"
+    showIndentGuide: true
+    softWrap: true
+  "exception-reporting":
+    userId: "95a4441c-1533-20a7-b797-35ddc578b861"
+  minimap:
+    plugins:
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+  welcome:
+    showOnStartup: false
