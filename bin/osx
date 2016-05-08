@@ -219,7 +219,7 @@ defaults write com.apple.terminal StringEncodings -array 4
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Turn on date & seconds for menubar clock
-defaults write com.apple.menuextra.clock DateFormat -string clock_format
+#defaults write com.apple.menuextra.clock DateFormat -string clock_format
 
 # Set the Finder prefs for showing a few different volumes on the Desktop.
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
