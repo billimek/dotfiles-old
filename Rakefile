@@ -39,7 +39,7 @@ task :install => [:submodule_init, :submodules] do
   if RUBY_PLATFORM.downcase.include?("darwin")
     install_fonts
     install_atom_packages
-    if $update
+    unless $update
       install_term_theme
     end
   end
