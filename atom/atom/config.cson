@@ -15,7 +15,7 @@
       "solarized-dark-syntax"
     ]
   editor:
-    fontFamily: "Source Code Pro"
+    fontFamily: "Source Code Pro for Powerline"
     showIndentGuide: true
     softWrap: true
   "exception-reporting":
