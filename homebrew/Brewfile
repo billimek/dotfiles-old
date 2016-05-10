@@ -18,7 +18,7 @@ brew 'ctags'
 #brew 'docker-machine'
 brew 'git'
 brew 'go', args: ['cross-compile-common']
-#brew 'ghi'
+brew 'ghi'
 brew 'gnupg'
 brew 'gradle'
 #brew 'grc'

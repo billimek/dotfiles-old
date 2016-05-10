@@ -50,17 +50,15 @@ sh -c "`curl -fsSL https://raw.githubusercontent.com/billimek/dotfiles/master/in
 
 ## Wait, you're not done! Do this:
 
-#### Install iTerm base16-Solarized Colors
-YADR will install base16-Solarized colorschemes into your iTerm. Go to Profiles => Colors => Load Presets to pick base16-solarized.dark`.
+#### Install iTerm base16-Solarized Colors & custom fonts
+* YADR will install base16-Solarized colorschemes into your iTerm. Go to Profiles => Colors => Load Presets to pick base16-solarized.dark`.
+* YADR will install a bunch of powerline-compatible fonts that you'll want to configure iTerm to use in order to render the prompt correctly.  I recommend using 'Sauce Code Powerline' font
 
 #### Remap caps-lock to escape with [Seil](https://pqrs.org/osx/karabiner/seil.html.en)
 The escape key is the single most used key in vim.  Old keyboards used to have Escape where Tab is today. Apple keyboards are the worst with their tiny Esc keys. But all this is fixed by remapping Caps to Escape.  If you're hitting a small target in the corner, you are slowing yourself down considerably, and probably damaging your hands with repetitive strain injuries.
 
 #### Set up a system wide hotkey for iTerm (Keys=>Hotkey)
 Recommended Cmd-Escape, which is really Cmd-Capslock.
-
-#### In iTerm, uncheck "Use Lion-style full screen" on General
-This will give you fast full screen windows that are switchable without switching to spaces.
 
 #### in MacVim, uncheck Prefer native fullscreen under Advanced settings
 Same as iTerm. The Lion style spaces navigation slows everything down for no reason.
@@ -96,6 +94,7 @@ Read on to learn what YADR provides!
 
 Homebrew is _the missing package manager for OSX_. Installed automatically.
 
+YADR makes use of the brew bundle package to make managing brew packages and cask packages as easy as editing the .Brewfile in the home directory.
 We automatically install a few useful packages including ctags, git, macvim, hub, and the silver searcher ('ag')
 Note that our autocomplete plugin requires a MacVim that supports Lua. The installer knows how to install it, but if you had one installed before, you may need to manually remove your old MacVim.
 
