@@ -12,7 +12,7 @@
     ]
     themes: [
       "one-dark-ui"
-      "base16-tomorrow-dark-theme"
+      "solarized-dark-syntax"
     ]
   editor:
     fontFamily: "Source Code Pro for Powerline"
