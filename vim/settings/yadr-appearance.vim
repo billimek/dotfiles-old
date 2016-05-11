@@ -25,9 +25,9 @@ else
     let g:solarized_termcolors=256
     let g:solarized_termtrans=1
   end
-""  let base16colorspace=256
+  let base16colorspace=256
 endif
 
 
-"colorscheme solarized
+colorscheme base16-tomorrow
 set background=dark
