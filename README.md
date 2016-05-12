@@ -50,8 +50,8 @@ sh -c "`curl -fsSL https://raw.githubusercontent.com/billimek/dotfiles/master/in
 
 ## Wait, you're not done! Do this:
 
-#### Install iTerm base16-Solarized Colors & custom fonts
-* YADR will install base16-Solarized colorschemes into your iTerm. Go to Profiles => Colors => Load Presets to pick base16-solarized.dark`.
+#### Install iTerm base16-tomorrow Colors & custom fonts
+* YADR will install base16-tomorrow colorschemes into your iTerm. Go to Profiles => Colors => Load Presets to pick base16-tomorrow.dark`.
 * YADR will install a bunch of powerline-compatible fonts that you'll want to configure iTerm to use in order to render the prompt correctly.  I recommend using 'Sauce Code Powerline' font
 
 #### Remap caps-lock to escape with [Seil](https://pqrs.org/osx/karabiner/seil.html.en)
@@ -65,7 +65,7 @@ Same as iTerm. The Lion style spaces navigation slows everything down for no rea
 
 ## If you want to run vim in terminal
 
-* Make sure you install Solarized colorscheme in your terminal!
+* Make sure you install base16-tomorrow colorscheme in your terminal!
 * If you don't want to use solarized terminal, then make sure you do this:
 
       let g:yadr_using_unsolarized_terminal = 1
