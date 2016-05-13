@@ -48,6 +48,10 @@ See the differences from this repo in the section below, and the original README
     * A bunch of [packages](atom/atom/packages.list) installed or upgraded as needed
   * Customized the defaults settings
 
+  ### Screenshots
+  ![vim](http://i.imgur.com/fpJV1as.png)
+  
+  ![shell](http://i.imgur.com/APdBrWn.png)
 
 # The original YADR Readme:
      _     _           _
