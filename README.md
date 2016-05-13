@@ -1,3 +1,55 @@
+**This is @billimek's version of YADR.**
+
+# Install
+
+    sh -c "`curl -fsSL https://raw.githubusercontent.com/billimek/dotfiles/master/install.sh`"
+
+
+See the differences from this repo in the section below, and the original README right after it:
+
+# This fork's differences
+
+* Core
+  * Modified the `rake upgrade` functionality to only do upgrade type activities and not full-install activities (e.g. iTerm setup is skipped)
+  * Install & update will avoid doing OSX stuff (e.g. iTerm, brew) if not running in OSX
+
+* ZSH
+  * My modified paradox zsh prompt theme
+  * [base16 dynamic shell](https://github.com/chriskempson/base16-shell.git) theme support
+  * Support for the [customized cf zsh completion module](https://github.com/Dannyzen/cf-zsh-autocomplete-plugin.git)
+  * Tweaked aliases
+  * gcloud CLI & completion
+  * iTerm shell integration support (it looks for the file)
+
+* GIT
+  * More stuff added to .gitignore
+
+* iTerm2
+  * base16-tomorrow theme (`base16-tomorrow.dark.256`)
+  * All of the [base16 iTerm2 themes](https://github.com/chriskempson/base16-iterm2.git) are pulled-in as a submodule
+
+* VIM
+  * [base16-tomorrow](https://github.com/lfilho/base16-vim). My personal colorscheme for vim
+
+* tmux
+  * mouse support
+  * tweaked keybindings to do some operations like screen (e.g. 'ctrl-a + n' moves to the next window)
+
+* GO Language
+  * Sets $GOPATH to $HOME/src/go
+
+* OSX
+  * Lots of new [brew packages & casks installed by default](homebrew/Brewfile)
+  * Makes use of `brew bundle` & associated .Brewfile for easy installation
+  * Added all of the [powerline-patched fonts](https://github.com/powerline/fonts.git)
+  * Atom:
+    * Support for custom [Atom configuration](atom/atom/config.cson)
+    * Atom themed with base16-tomorrow-dark-theme & Source Code Pro fonts
+    * A bunch of [packages](atom/atom/packages.list) installed or upgraded as needed
+  * Customized the defaults settings
+
+
+# The original YADR Readme:
      _     _           _
     | |   | |         | |
     | |___| |_____  __| | ____
@@ -10,7 +62,7 @@
 
 [![Join the chat at https://gitter.im/skwp/dotfiles](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/skwp/dotfiles?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-    sh -c "`curl -fsSL https://raw.githubusercontent.com/billimek/dotfiles/master/install.sh`"
+    sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
 
 **Always be sure to run `rake update` after pulling to ensure plugins are updated**
 
@@ -38,21 +90,20 @@ Please use GitHub Issues for pull requests or bug reports only.
 To get started please run:
 
 ```bash
-sh -c "`curl -fsSL https://raw.githubusercontent.com/billimek/dotfiles/master/install.sh`"
+sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`"
 ```
 
 **Note:** YADR will automatically install all of its subcomponents. If you want to be asked
 about each one, use:
 
 ```bash
-sh -c "`curl -fsSL https://raw.githubusercontent.com/billimek/dotfiles/master/install.sh`" -s ask
+sh -c "`curl -fsSL https://raw.githubusercontent.com/skwp/dotfiles/master/install.sh`" -s ask
 ```
 
 ## Wait, you're not done! Do this:
 
-#### Install iTerm base16-tomorrow Colors & custom fonts
-* YADR will install base16-tomorrow colorschemes into your iTerm. Go to Profiles => Colors => Load Presets to pick base16-tomorrow.dark`.
-* YADR will install a bunch of powerline-compatible fonts that you'll want to configure iTerm to use in order to render the prompt correctly.  I recommend using 'Sauce Code Powerline' font
+#### Install iTerm Solarized Colors
+YADR will install Solarized colorschemes into your iTerm. Go to Profiles => Colors => Load Presets to pick Solarized Dark.
 
 #### Remap caps-lock to escape with [Seil](https://pqrs.org/osx/karabiner/seil.html.en)
 The escape key is the single most used key in vim.  Old keyboards used to have Escape where Tab is today. Apple keyboards are the worst with their tiny Esc keys. But all this is fixed by remapping Caps to Escape.  If you're hitting a small target in the corner, you are slowing yourself down considerably, and probably damaging your hands with repetitive strain injuries.
@@ -60,12 +111,15 @@ The escape key is the single most used key in vim.  Old keyboards used to have E
 #### Set up a system wide hotkey for iTerm (Keys=>Hotkey)
 Recommended Cmd-Escape, which is really Cmd-Capslock.
 
+#### In iTerm, uncheck "Use Lion-style full screen" on General
+This will give you fast full screen windows that are switchable without switching to spaces.
+
 #### in MacVim, uncheck Prefer native fullscreen under Advanced settings
 Same as iTerm. The Lion style spaces navigation slows everything down for no reason.
 
 ## If you want to run vim in terminal
 
-* Make sure you install base16-tomorrow colorscheme in your terminal!
+* Make sure you install Solarized colorscheme in your terminal!
 * If you don't want to use solarized terminal, then make sure you do this:
 
       let g:yadr_using_unsolarized_terminal = 1
@@ -94,7 +148,6 @@ Read on to learn what YADR provides!
 
 Homebrew is _the missing package manager for OSX_. Installed automatically.
 
-YADR makes use of the brew bundle package to make managing brew packages and cask packages as easy as editing the .Brewfile in the home directory.
 We automatically install a few useful packages including ctags, git, macvim, hub, and the silver searcher ('ag')
 Note that our autocomplete plugin requires a MacVim that supports Lua. The installer knows how to install it, but if you had one installed before, you may need to manually remove your old MacVim.
 
