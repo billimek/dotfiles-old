@@ -116,5 +116,8 @@ set smartcase       " ...unless we type a capital
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
 
+set pastetoggle=<F2>
+:nmap <F3> :set invnumber<CR>
+
 "set mouse=a
 "set clipboard=unnamed
