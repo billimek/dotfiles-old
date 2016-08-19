@@ -4,6 +4,7 @@ atom-alignment
 atom-beautify
 atom-runner
 atom-solarized-dark-ui
+atom-typescript
 autoclose-html
 autocomplete-go
 color-picker

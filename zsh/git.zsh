@@ -37,3 +37,14 @@ add-remote() {
 add-upstream() {
   add-remote "$1" "upstream"
 }
+
+git_update() {
+	# Update repository.
+	if (`git branch -r| grep -q origin`); then
+		git pull origin master;
+	fi
+	if (`git branch -r| grep -q upstream`); then
+		git fetch upstream;
+		git merge upstream/master
+	fi
+}
