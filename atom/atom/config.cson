@@ -1,5 +1,8 @@
 "*":
   core:
+    disabledPackages: [
+      "go-debug"
+    ]
     ignoredNames: [
       ".git"
       ".hg"
