@@ -1,6 +1,6 @@
 [submodule "zsh/prezto"]
 	path = zsh/prezto
-	url = https://github.com/sorin-ionescu/prezto.git
+	url = https://github.com/billimek/prezto.git
   ignore = dirty
   branch = master
 [submodule "base16/base16-iterm2"]
