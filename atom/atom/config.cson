@@ -2,6 +2,7 @@
   core:
     disabledPackages: [
       "go-debug"
+      "activate-power-mode"
     ]
     ignoredNames: [
       ".git"
