@@ -1,5 +1,8 @@
 "*":
   core:
+    disabledPackages: [
+      "go-debug"
+    ]
     ignoredNames: [
       ".git"
       ".hg"
@@ -10,6 +13,7 @@
       "*.class"
       "*.asc"
     ]
+    telemetryConsent: "limited"
     themes: [
       "one-dark-ui"
       "base16-tomorrow-dark-theme"

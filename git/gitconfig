@@ -109,9 +109,10 @@
   # the usual default is to push all branches
   default = upstream
 [core]
-  autocrlf = false
+	autocrlf = false
   editor = vim
   excludesfile = ~/.yadr/git/gitignore
+	pager = less -x2
 [advice]
   statusHints = false
 [diff]
