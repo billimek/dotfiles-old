@@ -3,6 +3,7 @@
     disabledPackages: [
       "go-debug"
       "activate-power-mode"
+      "go-plus"
     ]
     ignoredNames: [
       ".git"
