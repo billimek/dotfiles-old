@@ -15,13 +15,11 @@ editorconfig
 emmet
 environment
 file-icons
-floobits
 git-diff-details
 git-log
 git-time-machine
 go-config
 go-get
-go-plus
 highlight-selected
 javascript-snippets
 jshint
