@@ -1,1 +1,1 @@
-prompt paradox
+prompt paradox_jb
