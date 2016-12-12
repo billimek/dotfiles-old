@@ -50,8 +50,16 @@ See the differences from this repo in the section below, and the original README
 
   ### Screenshots
   ![vim](http://i.imgur.com/fpJV1as.png)
-  
+
   ![shell](http://i.imgur.com/APdBrWn.png)
+
+
+# TODO
+
+* Enhance modified paradox prompt to show ruby info
+* Script iTerm setup to switch to powerline source code pro font
+* ??? idea from Cody
+
 
 # The original YADR Readme:
      _     _           _
