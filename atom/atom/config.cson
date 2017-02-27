@@ -6,7 +6,7 @@
     disabledPackages: [
       "go-debug"
       "activate-power-mode"
-      "go-plus"
+      "jshint"
     ]
     ignoredNames: [
       ".git"
