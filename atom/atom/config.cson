@@ -6,7 +6,7 @@
     disabledPackages: [
       "go-debug"
       "activate-power-mode"
-      "go-plus"
+      "jshint"
     ]
     ignoredNames: [
       ".git"
@@ -29,6 +29,7 @@
     softWrap: true
   "exception-reporting":
     userId: "95a4441c-1533-20a7-b797-35ddc578b861"
+  "linter-ui-default": {}
   minimap:
     plugins:
       "highlight-selected": true
