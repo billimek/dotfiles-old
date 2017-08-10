@@ -7,6 +7,9 @@
       "go-debug"
       "activate-power-mode"
       "jshint"
+      "atom-beautify"
+      "whitespace"
+      "go-plus"
     ]
     ignoredNames: [
       ".git"
@@ -29,7 +32,10 @@
     softWrap: true
   "exception-reporting":
     userId: "95a4441c-1533-20a7-b797-35ddc578b861"
-  "linter-ui-default": {}
+  linter:
+    ignoreGlob: "**/*.min.{js,css},**/*.go"
+  "linter-ui-default":
+    panelHeight: 69
   minimap:
     plugins:
       "highlight-selected": true

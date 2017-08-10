@@ -195,6 +195,7 @@ def install_homebrew
   run %{brew cask cleanup}
   run %{brew prune}
   run %{brew doctor}
+  #run %{brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher ghi}
   puts
   puts
 end
@@ -308,7 +309,7 @@ def install_prezto
   run %{ mkdir -p $HOME/.zsh.after }
   run %{ mkdir -p $HOME/.zsh.prompts }
 
-  if ENV["SHELL"].include? 'zsh' then
+  if "#{ENV['SHELL']}".include? 'zsh' then
     puts "Zsh is already configured as your shell of choice. Restart your session to load the new settings"
   else
     puts "Setting zsh as your default shell"
