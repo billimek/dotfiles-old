@@ -105,8 +105,8 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 zstyle ':prezto:module:ssh-agent' forwarding 'yes'
 
 # Set ssh-agent identities to load.
-zstyle ':prezto:module:ssh-agent' identities 'id_rsa' 'id_rsa2' 'id_github' 'id_rsa_github' 'id_rsa_github_billimek' 'thdgithub_rsa'
-zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github' 'id_rsa_github' 'id_rsa_github_billimek' 'thdgithub_rsa'
+#zstyle ':prezto:module:ssh-agent' identities 'id_rsa' 'id_rsa2' 'id_github' 'id_rsa_github' 'id_rsa_github_billimek' 'thdgithub_rsa'
+#zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github' 'id_rsa_github' 'id_rsa_github_billimek' 'thdgithub_rsa'
 
 #
 # Syntax Highlighting
