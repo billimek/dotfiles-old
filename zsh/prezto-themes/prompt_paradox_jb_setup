@@ -55,7 +55,7 @@ function prompt_paradox_build_prompt {
   if [[ -n "$cf_foundation_string" ]]; then
     if [[ $cf_foundation == at ]]; then
         prompt_paradox_start_segment red black '☁️  ${cf_foundation_string}'
-    elif [[ $cf_foundation == np ]]; then
+    elif [[ $cf_foundation =~ np ]]; then
         prompt_paradox_start_segment yellow black '☁️  ${cf_foundation_string}'
     elif [[ $cf_foundation =~ .*z[a-z].* ]]; then
         prompt_paradox_start_segment red black '⚠️ ☁️  ${cf_foundation_string}'
@@ -109,7 +109,7 @@ function prompt_paradox_precmd {
 
   # get cloudfoundry info
   if [[ -f ~/.cf/config.json ]]; then
-    cf_foundation=`grep ".Target" ~/.cf/config.json | sed 's/.*api\.run-\([^.]*\)\..*/\1/'`
+    cf_foundation=`grep ".Target" ~/.cf/config.json | sed -E 's/.*api\.run[.-]?(.*)\.homedepot\.com.*/\1/'`
     if [[ -n "$cf_foundation" ]]; then
       # if we have the jq bin, grab the org and space info, if we're logged in to cf
       local jq_bin=`command -v jq 2> /dev/null`
