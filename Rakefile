@@ -181,8 +181,7 @@ def install_homebrew
   puts "Updating Homebrew."
   puts "======================================================"
   run %{brew update}
-  run %{brew upgrade --all}
-  run %{brew cask update}
+  run %{brew upgrade}
   run %{brew update}
   puts
   puts
@@ -192,7 +191,6 @@ def install_homebrew
   run %{brew tap Homebrew/bundle}
   run %{brew bundle --global}
   run %{brew cleanup}
-  run %{brew cask cleanup}
   run %{brew prune}
   run %{brew doctor}
   #run %{brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher ghi}
