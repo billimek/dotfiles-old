@@ -11,3 +11,6 @@
 	path = fonts/fonts
 	url = https://github.com/powerline/fonts.git
   branch = master
+[submodule "base16/base16-iterm2-fork"]
+	path = base16/base16-iterm2-fork
+	url = https://github.com/martinlindhe/base16-iterm2
