@@ -21,6 +21,8 @@ task :install => [:submodule_init, :submodules] do
 
   install_rvm_binstubs
 
+  install_gems
+
   # this has all the runcoms from this directory.
   install_files(Dir.glob('atom/*')) if want_to_install?('atom stuff')
   install_files(Dir.glob('git/*')) if want_to_install?('git configs (color, aliases)')
@@ -166,6 +168,14 @@ def install_rvm_binstubs
   puts
 end
 
+def install_gems
+  puts "======================================================"
+  puts "Installing gemfiles"
+  puts "======================================================"
+  run %{ gem install colorls }
+  puts
+end
+
 def install_homebrew
   run %{which brew}
   unless $?.success?
@@ -202,7 +212,7 @@ def install_fonts
   puts "======================================================"
   puts "Installing patched fonts for Powerline/Lightline."
   puts "======================================================"
-  run %{ cp -f $HOME/.yadr/fonts/*.otf $HOME/Library/Fonts } if RUBY_PLATFORM.downcase.include?("darwin")
+  run %{ cp -f $HOME/.yadr/fonts/*.otf $HOME/Library/Fonts && cp -f $HOME/.yadr/fonts/*.ttf $HOME/Library/Fonts } if RUBY_PLATFORM.downcase.include?("darwin")
   run %{ mkdir -p ~/.fonts && cp ~/.yadr/fonts/*.otf ~/.fonts && fc-cache -vf ~/.fonts } if RUBY_PLATFORM.downcase.include?("linux")
   run %{ $HOME/.yadr/fonts/fonts/install.sh }
   puts
