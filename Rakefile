@@ -203,7 +203,6 @@ def install_homebrew
   run %{brew cleanup}
   run %{brew prune}
   run %{brew doctor}
-  #run %{brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher ghi}
   puts
   puts
 end
