@@ -10,6 +10,8 @@
       "atom-beautify"
       "whitespace"
       "go-plus"
+      "compare-files"
+      "emmet"
     ]
     ignoredNames: [
       ".git"
