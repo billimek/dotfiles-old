@@ -218,3 +218,5 @@ alias brewu='brew update  && brew upgrade && brew cleanup && brew prune && brew 
 
 # Docker
 alias dps='docker ps --format "table {{.Names}}\t{{.Status}}"'
+
+
