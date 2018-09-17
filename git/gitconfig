@@ -27,9 +27,9 @@
   b = branch -v                     # branch (verbose)
 
   # commit
-  c = commit -m                     # commit with message
-  ca = commit -am                   # commit all with message
-  ci = commit                       # commit
+  c = commit --signoff -m                     # commit with message
+  ca = commit --signoff -am                   # commit all with message
+  ci = commit --signoff                      # commit
   amend = commit --amend            # ammend your last commit
   ammend = commit --amend           # ammend your last commit
 
